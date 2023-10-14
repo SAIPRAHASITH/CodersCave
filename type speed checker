@@ -1,0 +1,14 @@
+import time
+import random
+
+words = ["apple", "banana", "cat", "dog", "elephant", "fish", "giraffe", "hippopotamus", "kangaroo", "lion", "monkey"]
+
+start_time = time.time()
+random_word =random.choice(words)
+print(random_word)
+user_input = input("Type the word: ")
+end_time = time.time()
+
+typing_speed = len(user_input) / (end_time - start_time) * 60
+
+print("Your typing speed is: {} words per minute".format(typing_speed))
